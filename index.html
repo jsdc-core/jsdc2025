@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JSDC Landing Page</title>
+    <title>JSDC 2025</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -12,7 +12,7 @@
         }
         .logo {
             /* Replace with the actual JSDC logo URL */
-            background-image: url('https://placehold.co/100x50/EEE/31343C?text=JSDC+Logo&font=Inter');
+            background-image: url('https://4zsonuc2dqbo5ggsnhif4i5bl63b2zj4vs2wnkixpteh2v2ixtha.arweave.net/5mTm0FocAu6Y0mnQXiOhX7YdZTystWapF3zIfVdIvM4');
             background-size: contain;
             background-repeat: no-repeat;
             width: 100px;
@@ -26,13 +26,15 @@
             <div class="logo"></div>
             <nav class="hidden md:block">
                 <ul class="flex space-x-6">
-                    <li><a href="#about" class="text-gray-300 hover:text-white transition-colors">About</a></li>
-                    <li><a href="#speakers" class="text-gray-300 hover:text-white transition-colors">Speakers</a></li>
-                    <li><a href="#schedule" class="text-gray-300 hover:text-white transition-colors">Schedule</a></li>
-                    <li><a href="#sponsors" class="text-gray-300 hover:text-white transition-colors">Sponsors</a></li>
-                    <li><a href="#contact" class="text-gray-300 hover:text-white transition-colors">Contact</a></li>
+                    <li><a href="#about" class="text-gray-300 hover:text-white transition-colors" data-en="About" data-zh="關於我們">About</a></li>
+                    <li><a href="#speakers" class="text-gray-300 hover:text-white transition-colors" data-en="Speakers" data-zh="講者">Speakers</a></li>
+                    <li><a href="#schedule" class="text-gray-300 hover:text-white transition-colors" data-en="Schedule" data-zh="議程">Schedule</a></li>
+                    <li><a href="#sponsors" class="text-gray-300 hover:text-white transition-colors" data-en="Sponsors" data-zh="贊助商">Sponsors</a></li>
+                    <li><a href="#contact" class="text-gray-300 hover:text-white transition-colors" data-en="Contact" data-zh="聯絡我們">Contact</a></li>
+                    <li><a id="lang-toggle" class="text-gray-300 hover:text-white transition-colors">中文</a></li>
                 </ul>
             </nav>
+
             <button id="hamburger-btn" class="md:hidden text-gray-300 focus:outline-none" aria-label="Toggle Navigation">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
@@ -40,7 +42,7 @@
 
             </button>
         </div>
-         <div id="mobile-menu" class="hidden fixed top-0 right-0 h-full w-80 bg-gray-800 bg-opacity-90 z-50 p-6 transform transition-transform duration-300 ease-in-out" style="transform: translateX(100%);">
+        <div id="mobile-menu" class="hidden fixed top-0 right-0 h-full w-80 bg-gray-800 bg-opacity-90 z-50 p-6 transform transition-transform duration-300 ease-in-out" style="transform: translateX(100%);">
             <div class="flex justify-end mb-4">
                 <button id="close-menu-btn" class="text-gray-300 focus:outline-none" aria-label="Close Menu">
                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -62,53 +64,78 @@
 
     <main>
         <section id="hero" class="py-20 px-4 sm:px-6 lg:px-8 text-center">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600 animate-hue">
-                台灣 JavaScript 開發者年會
+            <h1 class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600 animate-hue"
+                data-en="Taiwan JavaScript Developer Conference"
+                data-zh="台灣 JavaScript 開發者年會">
+                Taiwan JavaScript Developer Conference
             </h1>
-            <p class="mt-4 text-lg text-gray-300 max-w-2xl mx-auto">
+            <p class="mb-4 mt-4 text-lg text-gray-300"
+                data-en="Join us for the largest JavaScript conference in Taiwan!"
+                data-zh="加入我們，一起參加全台最大的 JavaScript 年會！">
                 Join us for the largest JavaScript conference in Taiwan!
             </p>
-            <a href="#donation" class="mt-8 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold py-3 px-6 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105">
-                前往贊助
+            <a href="#donation" class="mt-12 inline-block bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold py-3 px-6 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105"
+                data-en="Become Sponsor" data-zh="成為贊助商">
+                Become Sponsor
             </a>
         </section>
 
         <section id="about" class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800">
             <div class="max-w-3xl mx-auto">
-                <h2 class="text-3xl font-semibold mb-6 text-center bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">關於 JSDC</h2>
-                <p class="text-gray-300 leading-relaxed">
-                    JSDC (JavaScript Developer Conference) is Taiwan's largest annual technical conference for JavaScript developers.  It aims to provide a platform for sharing the latest JavaScript technologies and fostering collaboration among developers.  Founded in 2011 by three developer communities, JSDC has grown significantly, bringing together top international speakers and local talent. The conference focuses on cutting-edge topics such as full-stack web development, software and hardware integration, and enterprise JavaScript adoption.  JSDC also plays a key role in supporting and promoting various front-end and back-end technology communities in Taiwan.
-                </p>
+              <h2 class="text-3xl font-semibold mb-6 text-center bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600"
+                  data-en="About JSDC" data-zh="關於 JSDC">
+                  About JSDC
+              </h2>
+              <p class="text-gray-300 leading-relaxed"
+                 data-en="JSDC (JavaScript Developer Conference) is Taiwan's largest annual technical conference for JavaScript developers. It aims to provide a platform for sharing the latest JavaScript technologies and fostering collaboration among developers. Founded in 2011 by three developer communities, JSDC has grown significantly, bringing together top international speakers and local talent. The conference focuses on cutting-edge topics such as full-stack web development, software and hardware integration, and enterprise JavaScript adoption. JSDC also plays a key role in supporting and promoting various front-end and back-end technology communities in Taiwan."
+                 data-zh="JSDC（JavaScript 開發者年會）是台灣每年規模最大的 JavaScript 技術研討會，致力於分享最新技術並促進開發者交流。自 2011 年由三大開發社群創立以來，JSDC 已快速成長，匯聚了國際講者與本地人才。議題涵蓋全端開發、軟硬體整合與協助企業導入JavaScript 。JSDC 也積極支持並參與台灣各種前後端技術社群">
+                 JSDC (JavaScript Developer Conference) is Taiwan's largest annual technical conference for JavaScript developers. It aims to provide a platform for sharing the latest JavaScript technologies and fostering collaboration among developers. Founded in 2011 by three developer communities, JSDC has grown significantly, bringing together top international speakers and local talent. The conference focuses on cutting-edge topics such as full-stack web development, software and hardware integration, and enterprise JavaScript adoption. JSDC also plays a key role in supporting and promoting various front-end and back-end technology communities in Taiwan.
+              </p>
             </div>
         </section>
 
         <section id="speakers" class="py-16 px-4 sm:px-6 lg:px-8">
             <div class="max-w-6xl mx-auto">
-                <h2 class="text-3xl font-semibold mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">Keynote Speakers</h2>
+                <h2 class="text-3xl font-semibold mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600"
+                  data-en="Keynote Speakers" data-zh="主題講座">
+                Keynote Speakers
+                </h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     <div class="bg-gray-800 rounded-lg shadow-lg p-6 transition-all duration-300 hover:shadow-xl hover:scale-[1.02]">
-                        <img src="https://placehold.co/150x150/EEE/31343C?text=Speaker+1&font=Inter" alt="Speaker 1" class="w-32 h-32 rounded-full mx-auto mb-4">
-                        <h3 class="text-xl font-semibold text-center text-white">講者姓名 1</h3>
-                        <p class="text-gray-400 text-center mb-2">講者頭銜 1</p>
-                        <p class="text-gray-300 text-sm">
-                            Speaker 1 Bio: Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        </p>
+                  <img src="https://4zsonuc2dqbo5ggsnhif4i5bl63b2zj4vs2wnkixpteh2v2ixtha.arweave.net/5mTm0FocAu6Y0mnQXiOhX7YdZTystWapF3zIfVdIvM4" alt="Speaker 1" class="w-32 h-32 rounded-full mx-auto mb-4">
+                  <h3 class="text-xl font-semibold text-center text-white" data-en="Speaker Name" data-zh="講者姓名">Speaker Name</h3>
+                  <p class="text-gray-400 text-center mb-2" data-en="Speaker Title" data-zh="講者頭銜">Speaker Title</p>
+                  <p class="text-gray-300 text-sm" data-en="Speaker 1 Bio: Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                     data-zh="講者 1 簡介：這裡是講者的簡介文字，介紹講者的背景與專長。">
+                    Speaker 1 Bio: Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  </p>
                     </div>
                     <div class="bg-gray-800 rounded-lg shadow-lg p-6 transition-all duration-300 hover:shadow-xl hover:scale-[1.02]">
-                        <img src="https://placehold.co/150x150/EEE/31343C?text=Speaker+2&font=Inter" alt="Speaker 2" class="w-32 h-32 rounded-full mx-auto mb-4">
-                        <h3 class="text-xl font-semibold text-center text-white">講者姓名 2</h3>
-                        <p class="text-gray-400 text-center mb-2">講者頭銜 2</p>
-                        <p class="text-gray-300 text-sm">
-                            Speaker 2 Bio: Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        </p>
+                  <img src="https://4zsonuc2dqbo5ggsnhif4i5bl63b2zj4vs2wnkixpteh2v2ixtha.arweave.net/5mTm0FocAu6Y0mnQXiOhX7YdZTystWapF3zIfVdIvM4" alt="Speaker 2" class="w-32 h-32 rounded-full mx-auto mb-4">
+                  <h3 class="text-xl font-semibold text-center text-white" data-en="Speaker Name 2" data-zh="講者姓名 2">Speaker Name 2</h3>
+                  <p class="text-gray-400 text-center mb-2" data-en="Speaker Title 2" data-zh="講者頭銜 2">Speaker Title 2</p>
+                  <p class="text-gray-300 text-sm" data-en="Speaker 2 Bio: Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                     data-zh="講者 2 簡介：這裡是講者的簡介文字，介紹講者的背景與專長。">
+                    Speaker 2 Bio: Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  </p>
                     </div>
                     <div class="bg-gray-800 rounded-lg shadow-lg p-6 transition-all duration-300 hover:shadow-xl hover:scale-[1.02]">
-                        <img src="https://placehold.co/150x150/EEE/31343C?text=Speaker+3&font=Inter" alt="Speaker 3" class="w-32 h-32 rounded-full mx-auto mb-4">
-                        <h3 class="text-xl font-semibold text-center text-white">講者姓名 3</h3>
-                        <p class="text-gray-400 text-center mb-2">講者頭銜 3</p>
-                        <p class="text-gray-300 text-sm">
-                           Speaker 3 Bio: Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        </p>
+                  <img src="https://4zsonuc2dqbo5ggsnhif4i5bl63b2zj4vs2wnkixpteh2v2ixtha.arweave.net/5mTm0FocAu6Y0mnQXiOhX7YdZTystWapF3zIfVdIvM4" alt="Speaker 3" class="w-32 h-32 rounded-full mx-auto mb-4">
+                  <h3 class="text-xl font-semibold text-center text-white" data-en="Speaker Name 3" data-zh="講者姓名 3">Speaker Name 3</h3>
+                  <p class="text-gray-400 text-center mb-2" data-en="Speaker Title 3" data-zh="講者頭銜 3">Speaker Title 3</p>
+                  <p class="text-gray-300 text-sm" data-en="Speaker 3 Bio: Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+                     data-zh="講者 3 簡介：這裡是講者的簡介文字，介紹講者的背景與專長。">
+                    Speaker 3 Bio: Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                  </p>
+                    </div>
+                    <div class="bg-gray-800 rounded-lg shadow-lg p-6 transition-all duration-300 hover:shadow-xl hover:scale-[1.02]">
+                  <img src="https://4zsonuc2dqbo5ggsnhif4i5bl63b2zj4vs2wnkixpteh2v2ixtha.arweave.net/5mTm0FocAu6Y0mnQXiOhX7YdZTystWapF3zIfVdIvM4" alt="Speaker 4" class="w-32 h-32 rounded-full mx-auto mb-4">
+                  <h3 class="text-xl font-semibold text-center text-white" data-en="Speaker Name 4" data-zh="講者姓名 4">Speaker Name 4</h3>
+                  <p class="text-gray-400 text-center mb-2" data-en="Speaker Title 4" data-zh="講者頭銜 4">Speaker Title 4</p>
+                  <p class="text-gray-300 text-sm" data-en="Speaker 4 Bio: Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+                     data-zh="講者 4 簡介：這裡是講者的簡介文字，介紹講者的背景與專長。">
+                    Speaker 4 Bio: Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                  </p>
                     </div>
                 </div>
             </div>
@@ -116,65 +143,91 @@
 
         <section id="schedule" class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800">
             <div class="max-w-6xl mx-auto">
-                <h2 class="text-3xl font-semibold mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">議程</h2>
+                <h2 class="text-3xl font-semibold mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600"
+                  data-en="Schedule" data-zh="議程">
+                  議程
+                </h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div class="bg-gray-700 rounded-lg shadow-md p-6">
-                        <h3 class="text-xl font-semibold text-white mb-4">Day 1: 2025/11/29</h3>
+                        <h3 class="text-xl font-semibold text-white mb-4">2025/11/29</h3>
+                        <h3 data-en="Venue: GIS NTU Convention Center" data-zh="地點：台大集思會議中心">
+                            Venue: GIS NTU Convention Center
+                        </h3>
                         <ul class="space-y-2">
                             <li class="flex justify-between items-center border-b border-gray-600 py-2">
                                 <span class="text-gray-300">9:00 AM - 10:00 AM</span>
-                                <span class="text-white font-medium">Opening Ceremony</span>
+                                <span class="text-white font-medium" data-en="Opening Ceremony" data-zh="開幕式">Opening Ceremony</span>
                             </li>
                             <li class="flex justify-between items-center border-b border-gray-600 py-2">
                                 <span class="text-gray-300">10:00 AM - 11:30 AM</span>
-                                <span class="text-white font-medium">Keynote 1</span>
+                                <span class="text-white font-medium" data-en="Keynote 1" data-zh="主題演講一">Keynote 1</span>
                             </li>
                             <li class="flex justify-between items-center border-b border-gray-600 py-2">
-                                 <span class="text-gray-300">11:30 AM - 1:00 PM</span>
-                                 <span class="text-white font-medium">Lunch Break</span>
+                                <span class="text-gray-300">11:30 AM - 1:00 PM</span>
+                                <span class="text-white font-medium" data-en="Lunch Break" data-zh="午餐時間">Lunch Break</span>
                             </li>
                             <li class="flex justify-between items-center border-b border-gray-600 py-2">
                                 <span class="text-gray-300">1:00 PM - 2:30 PM</span>
-                                <span class="text-white font-medium">Session 1</span>
+                                <span class="text-white font-medium" data-en="Session 1" data-zh="分場一">Session 1</span>
                             </li>
                             <li class="flex justify-between items-center py-2">
                                 <span class="text-gray-300">2:30 PM - 4:00 PM</span>
-                                <span class="text-white font-medium">Session 2</span>
+                                <span class="text-white font-medium" data-en="Session 2" data-zh="分場二">Session 2</span>
                             </li>
                         </ul>
                     </div>
-                    </div>
+                </div>
             </div>
         </section>
+          
 
         <section id="sponsors" class="py-16 px-4 sm:px-6 lg:px-8">
             <div class="max-w-6xl mx-auto">
-                <h2 class="text-3xl font-semibold mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">贊助商</h2>
+                <h2 class="text-3xl font-semibold mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600"
+                    data-en="Sponsors" data-zh="贊助商">
+                    Sponsors
+                </h2>
                 <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
-                    <img src="https://placehold.co/180x80/EEE/31343C?text=Sponsor+1&font=Inter" alt="Sponsor 1" class="h-auto w-full object-contain">
-                    <img src="https://placehold.co/180x80/EEE/31343C?text=Sponsor+2&font=Inter" alt="Sponsor 2" class="h-auto w-full object-contain">
-                    <img src="https://placehold.co/180x80/EEE/31343C?text=Sponsor+3&font=Inter" alt="Sponsor 3" class="h-auto w-full object-contain">
-                    <img src="https://placehold.co/180x80/EEE/31343C?text=Sponsor+4&font=Inter" alt="Sponsor 4" class="h-auto w-full object-contain">
-                    <img src="https://placehold.co/180x80/EEE/31343C?text=Sponsor+5&font=Inter" alt="Sponsor 5" class="h-auto w-full object-contain">
-                    <img src="https://placehold.co/180x80/EEE/31343C?text=Sponsor+6&font=Inter" alt="Sponsor 6" class="h-auto w-full object-contain">
-                    <img src="https://placehold.co/180x80/EEE/31343C?text=Sponsor+7&font=Inter" alt="Sponsor 7" class="h-auto w-full object-contain">
-                    <img src="https://placehold.co/180x80/EEE/31343C?text=Sponsor+8&font=Inter" alt="Sponsor 8" class="h-auto w-full object-contain">
+                    <img data-en="https://4hut5nv7425smxrrweug4lvtewbcsc5oauyt3sqzykgtznicmuaa.arweave.net/4ek-tr_muyZeMbEobi6zJYIpC64FMT3KGcKNPLUCZQA"
+                        data-zh="https://iyx6akhqslwfcxhz6f2munyvyfhbtvps7ghi7fi6q66cwpmdvcdq.arweave.net/Ri_gKPCS7FFc-fF0yjcVwU4Z1fL5jo-VHoe8Kz2DqIc"
+                        src="https://4hut5nv7425smxrrweug4lvtewbcsc5oauyt3sqzykgtznicmuaa.arweave.net/4ek-tr_muyZeMbEobi6zJYIpC64FMT3KGcKNPLUCZQA"
+                        alt="Sponsor" class="h-auto w-full object-contain toggle-lang-img">
+                    <img data-en="https://4hut5nv7425smxrrweug4lvtewbcsc5oauyt3sqzykgtznicmuaa.arweave.net/4ek-tr_muyZeMbEobi6zJYIpC64FMT3KGcKNPLUCZQA"
+                        data-zh="https://iyx6akhqslwfcxhz6f2munyvyfhbtvps7ghi7fi6q66cwpmdvcdq.arweave.net/Ri_gKPCS7FFc-fF0yjcVwU4Z1fL5jo-VHoe8Kz2DqIc"
+                        src="https://4hut5nv7425smxrrweug4lvtewbcsc5oauyt3sqzykgtznicmuaa.arweave.net/4ek-tr_muyZeMbEobi6zJYIpC64FMT3KGcKNPLUCZQA"
+                        alt="Sponsor" class="h-auto w-full object-contain toggle-lang-img">
+                    <img data-en="https://4hut5nv7425smxrrweug4lvtewbcsc5oauyt3sqzykgtznicmuaa.arweave.net/4ek-tr_muyZeMbEobi6zJYIpC64FMT3KGcKNPLUCZQA"
+                        data-zh="https://iyx6akhqslwfcxhz6f2munyvyfhbtvps7ghi7fi6q66cwpmdvcdq.arweave.net/Ri_gKPCS7FFc-fF0yjcVwU4Z1fL5jo-VHoe8Kz2DqIc"
+                        src="https://4hut5nv7425smxrrweug4lvtewbcsc5oauyt3sqzykgtznicmuaa.arweave.net/4ek-tr_muyZeMbEobi6zJYIpC64FMT3KGcKNPLUCZQA"
+                        alt="Sponsor" class="h-auto w-full object-contain toggle-lang-img">
+                    <img data-en="https://4hut5nv7425smxrrweug4lvtewbcsc5oauyt3sqzykgtznicmuaa.arweave.net/4ek-tr_muyZeMbEobi6zJYIpC64FMT3KGcKNPLUCZQA"
+                    data-zh="https://iyx6akhqslwfcxhz6f2munyvyfhbtvps7ghi7fi6q66cwpmdvcdq.arweave.net/Ri_gKPCS7FFc-fF0yjcVwU4Z1fL5jo-VHoe8Kz2DqIc"
+                    src="https://4hut5nv7425smxrrweug4lvtewbcsc5oauyt3sqzykgtznicmuaa.arweave.net/4ek-tr_muyZeMbEobi6zJYIpC64FMT3KGcKNPLUCZQA"
+                    alt="Sponsor" class="h-auto w-full object-contain toggle-lang-img">
+                    <img data-en="https://4hut5nv7425smxrrweug4lvtewbcsc5oauyt3sqzykgtznicmuaa.arweave.net/4ek-tr_muyZeMbEobi6zJYIpC64FMT3KGcKNPLUCZQA"
+                    data-zh="https://iyx6akhqslwfcxhz6f2munyvyfhbtvps7ghi7fi6q66cwpmdvcdq.arweave.net/Ri_gKPCS7FFc-fF0yjcVwU4Z1fL5jo-VHoe8Kz2DqIc"
+                    src="https://4hut5nv7425smxrrweug4lvtewbcsc5oauyt3sqzykgtznicmuaa.arweave.net/4ek-tr_muyZeMbEobi6zJYIpC64FMT3KGcKNPLUCZQA"
+                    alt="Sponsor" class="h-auto w-full object-contain toggle-lang-img"> 
                 </div>
             </div>
         </section>
 
         <section id="contact" class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800">
             <div class="max-w-3xl mx-auto text-center">
-                <h2 class="text-3xl font-semibold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">Contact Us</h2>
-                <p class="text-gray-300 mb-8">
-                    Email: hq@jsdc.tw
-                </p>
-                 </div>
+              <h2 class="text-3xl font-semibold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600"
+                  data-en="Contact Us" data-zh="聯絡我們">
+                  Contact Us
+              </h2>
+              <p class="text-gray-300 mb-8"
+                 data-en="Email: hq@jsdc.tw" data-zh="電子郵件：hq@jsdc.tw">
+                 Email: hq@jsdc.tw
+              </p>
+            </div>
         </section>
     </main>
 
     <footer class="py-6 px-4 sm:px-6 lg:px-8 text-center text-gray-400">
-        &copy; 2024 JSDC. All rights reserved.
+        &copy; 2025 JSDC. All rights reserved.
     </footer>
 
     <script>
@@ -253,7 +306,17 @@
             heading.classList.add('animate-hue'); // Add the class to trigger the animation
         }
 
+        const toggleBtn = document.getElementById('lang-toggle');
+        let currentLang = 'en';
 
+        toggleBtn.addEventListener('click', () => {
+        currentLang = currentLang === 'en' ? 'zh' : 'en';
+        toggleBtn.textContent = currentLang === 'en' ? '中文' : 'English';
+
+        document.querySelectorAll('[data-en][data-zh]').forEach(el => {
+            el.textContent = el.getAttribute(`data-${currentLang}`);
+        });
+        });
     </script>
 </body>
 </html>
