@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSDC Landing Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .logo {
+            /* Replace with the actual JSDC logo URL */
+            background-image: url('https://placehold.co/100x50/EEE/31343C?text=JSDC+Logo&font=Inter');
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 100px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <header class="py-6 px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between">
+            <div class="logo"></div>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-6">
+                    <li><a href="#about" class="text-gray-300 hover:text-white transition-colors">About</a></li>
+                    <li><a href="#speakers" class="text-gray-300 hover:text-white transition-colors">Speakers</a></li>
+                    <li><a href="#schedule" class="text-gray-300 hover:text-white transition-colors">Schedule</a></li>
+                    <li><a href="#sponsors" class="text-gray-300 hover:text-white transition-colors">Sponsors</a></li>
+                    <li><a href="#contact" class="text-gray-300 hover:text-white transition-colors">Contact</a></li>
+                </ul>
+            </nav>
+            <button id="hamburger-btn" class="md:hidden text-gray-300 focus:outline-none" aria-label="Toggle Navigation">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+
+            </button>
+        </div>
+         <div id="mobile-menu" class="hidden fixed top-0 right-0 h-full w-80 bg-gray-800 bg-opacity-90 z-50 p-6 transform transition-transform duration-300 ease-in-out" style="transform: translateX(100%);">
+            <div class="flex justify-end mb-4">
+                <button id="close-menu-btn" class="text-gray-300 focus:outline-none" aria-label="Close Menu">
+                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <nav class="block">
+                <ul class="space-y-4">
+                    <li><a href="#about" class="block text-lg text-gray-300 hover:text-white transition-colors">About</a></li>
+                    <li><a href="#speakers" class="block text-lg text-gray-300 hover:text-white transition-colors">Speakers</a></li>
+                    <li><a href="#schedule" class="block text-lg text-gray-300 hover:text-white transition-colors">Schedule</a></li>
+                    <li><a href="#sponsors" class="block text-lg text-gray-300 hover:text-white transition-colors">Sponsors</a></li>
+                    <li><a href="#contact" class="block text-lg text-gray-300 hover:text-white transition-colors">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="py-20 px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600 animate-hue">
+                台灣 JavaScript 開發者年會
+            </h1>
+            <p class="mt-4 text-lg text-gray-300 max-w-2xl mx-auto">
+                Join us for the largest JavaScript conference in Taiwan!
+            </p>
+            <a href="#donation" class="mt-8 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold py-3 px-6 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105">
+                前往贊助
+            </a>
+        </section>
+
+        <section id="about" class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-3xl font-semibold mb-6 text-center bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">關於 JSDC</h2>
+                <p class="text-gray-300 leading-relaxed">
+                    JSDC (JavaScript Developer Conference) is Taiwan's largest annual technical conference for JavaScript developers.  It aims to provide a platform for sharing the latest JavaScript technologies and fostering collaboration among developers.  Founded in 2011 by three developer communities, JSDC has grown significantly, bringing together top international speakers and local talent. The conference focuses on cutting-edge topics such as full-stack web development, software and hardware integration, and enterprise JavaScript adoption.  JSDC also plays a key role in supporting and promoting various front-end and back-end technology communities in Taiwan.
+                </p>
+            </div>
+        </section>
+
+        <section id="speakers" class="py-16 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl font-semibold mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">Keynote Speakers</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-gray-800 rounded-lg shadow-lg p-6 transition-all duration-300 hover:shadow-xl hover:scale-[1.02]">
+                        <img src="https://placehold.co/150x150/EEE/31343C?text=Speaker+1&font=Inter" alt="Speaker 1" class="w-32 h-32 rounded-full mx-auto mb-4">
+                        <h3 class="text-xl font-semibold text-center text-white">講者姓名 1</h3>
+                        <p class="text-gray-400 text-center mb-2">講者頭銜 1</p>
+                        <p class="text-gray-300 text-sm">
+                            Speaker 1 Bio: Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
+                    </div>
+                    <div class="bg-gray-800 rounded-lg shadow-lg p-6 transition-all duration-300 hover:shadow-xl hover:scale-[1.02]">
+                        <img src="https://placehold.co/150x150/EEE/31343C?text=Speaker+2&font=Inter" alt="Speaker 2" class="w-32 h-32 rounded-full mx-auto mb-4">
+                        <h3 class="text-xl font-semibold text-center text-white">講者姓名 2</h3>
+                        <p class="text-gray-400 text-center mb-2">講者頭銜 2</p>
+                        <p class="text-gray-300 text-sm">
+                            Speaker 2 Bio: Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                    </div>
+                    <div class="bg-gray-800 rounded-lg shadow-lg p-6 transition-all duration-300 hover:shadow-xl hover:scale-[1.02]">
+                        <img src="https://placehold.co/150x150/EEE/31343C?text=Speaker+3&font=Inter" alt="Speaker 3" class="w-32 h-32 rounded-full mx-auto mb-4">
+                        <h3 class="text-xl font-semibold text-center text-white">講者姓名 3</h3>
+                        <p class="text-gray-400 text-center mb-2">講者頭銜 3</p>
+                        <p class="text-gray-300 text-sm">
+                           Speaker 3 Bio: Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="schedule" class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl font-semibold mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">議程</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-gray-700 rounded-lg shadow-md p-6">
+                        <h3 class="text-xl font-semibold text-white mb-4">Day 1: 2025/11/29</h3>
+                        <ul class="space-y-2">
+                            <li class="flex justify-between items-center border-b border-gray-600 py-2">
+                                <span class="text-gray-300">9:00 AM - 10:00 AM</span>
+                                <span class="text-white font-medium">Opening Ceremony</span>
+                            </li>
+                            <li class="flex justify-between items-center border-b border-gray-600 py-2">
+                                <span class="text-gray-300">10:00 AM - 11:30 AM</span>
+                                <span class="text-white font-medium">Keynote 1</span>
+                            </li>
+                            <li class="flex justify-between items-center border-b border-gray-600 py-2">
+                                 <span class="text-gray-300">11:30 AM - 1:00 PM</span>
+                                 <span class="text-white font-medium">Lunch Break</span>
+                            </li>
+                            <li class="flex justify-between items-center border-b border-gray-600 py-2">
+                                <span class="text-gray-300">1:00 PM - 2:30 PM</span>
+                                <span class="text-white font-medium">Session 1</span>
+                            </li>
+                            <li class="flex justify-between items-center py-2">
+                                <span class="text-gray-300">2:30 PM - 4:00 PM</span>
+                                <span class="text-white font-medium">Session 2</span>
+                            </li>
+                        </ul>
+                    </div>
+                    </div>
+            </div>
+        </section>
+
+        <section id="sponsors" class="py-16 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl font-semibold mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">贊助商</h2>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
+                    <img src="https://placehold.co/180x80/EEE/31343C?text=Sponsor+1&font=Inter" alt="Sponsor 1" class="h-auto w-full object-contain">
+                    <img src="https://placehold.co/180x80/EEE/31343C?text=Sponsor+2&font=Inter" alt="Sponsor 2" class="h-auto w-full object-contain">
+                    <img src="https://placehold.co/180x80/EEE/31343C?text=Sponsor+3&font=Inter" alt="Sponsor 3" class="h-auto w-full object-contain">
+                    <img src="https://placehold.co/180x80/EEE/31343C?text=Sponsor+4&font=Inter" alt="Sponsor 4" class="h-auto w-full object-contain">
+                    <img src="https://placehold.co/180x80/EEE/31343C?text=Sponsor+5&font=Inter" alt="Sponsor 5" class="h-auto w-full object-contain">
+                    <img src="https://placehold.co/180x80/EEE/31343C?text=Sponsor+6&font=Inter" alt="Sponsor 6" class="h-auto w-full object-contain">
+                    <img src="https://placehold.co/180x80/EEE/31343C?text=Sponsor+7&font=Inter" alt="Sponsor 7" class="h-auto w-full object-contain">
+                    <img src="https://placehold.co/180x80/EEE/31343C?text=Sponsor+8&font=Inter" alt="Sponsor 8" class="h-auto w-full object-contain">
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-3xl font-semibold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">Contact Us</h2>
+                <p class="text-gray-300 mb-8">
+                    Email: hq@jsdc.tw
+                </p>
+                 </div>
+        </section>
+    </main>
+
+    <footer class="py-6 px-4 sm:px-6 lg:px-8 text-center text-gray-400">
+        &copy; 2024 JSDC. All rights reserved.
+    </footer>
+
+    <script>
+        const hamburgerBtn = document.getElementById("hamburger-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const closeMenuBtn = document.getElementById("close-menu-btn");
+        const mobileMenuLinks = mobileMenu.querySelectorAll("a");
+        const navLinks = document.querySelectorAll('header nav a');
+        const sections = document.querySelectorAll('section');
+
+        function toggleMobileMenu() {
+            mobileMenu.classList.toggle("hidden");
+            if (!mobileMenu.classList.contains("hidden")) {
+                mobileMenu.style.transform = "translateX(0%)";
+            } else {
+                mobileMenu.style.transform = "translateX(100%)";
+            }
+
+        }
+
+        hamburgerBtn.addEventListener("click", toggleMobileMenu);
+        closeMenuBtn.addEventListener("click", toggleMobileMenu);
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener("click", toggleMobileMenu);
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!mobileMenu.classList.contains('hidden') && !mobileMenu.contains(event.target) && event.target !== hamburgerBtn) {
+                toggleMobileMenu();
+            }
+        });
+
+        function updateActiveNavLink() {
+            let currentSectionId = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.scrollY >= sectionTop - 100 && window.scrollY < sectionTop + sectionHeight - 100) {
+                    currentSectionId = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').slice(1) === currentSectionId) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', updateActiveNavLink);
+
+        // Smooth scrolling for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        //Mobile menu
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth < 768) { // Assuming md breakpoint is 768px
+                    toggleMobileMenu(); // Close the menu when a link is clicked
+                }
+            });
+        });
+
+        // Color cycling animation for the main heading
+        const heading = document.querySelector('#hero h1');
+        if (heading) {
+            heading.classList.add('animate-hue'); // Add the class to trigger the animation
+        }
+
+
+    </script>
+</body>
+</html>
